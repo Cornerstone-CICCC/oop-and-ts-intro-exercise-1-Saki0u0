@@ -6,6 +6,35 @@
 
 class Book {
   // YOUR CODE HERE
+  #title;
+  #author;
+  #price;
+  constructor(title,author,price){
+    this.#title = title
+    this.#author = author
+    this.#price = price
+  }
+
+  addDiscount(value){
+    const discount = 1 - value * 0.01
+    this.#price *= discount
+  }
+
+  get title() {
+    return this.#title
+  }
+
+  set title(newTitle) {
+    if (newTitle !== "") {
+      this.#title = newTitle;
+    } else {
+      console.log("Title cannot be empty.");
+    }
+  }
+
+  get price(){
+    return this.#price
+  }
 }
 
 
