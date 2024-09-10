@@ -10,6 +10,12 @@ class Car {
     this._year = year
   }
 
+  set year(newYear) {
+    if (newYear > this._year) {
+      this._year = newYear;
+    }
+  }
+
   get year() {
     return this._year;
   }
